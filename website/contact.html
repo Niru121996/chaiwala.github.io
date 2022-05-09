@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>NiruKiChai</title>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.1/css/bootstrap.min.css">
+   <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+<header class="header fixed-top">
+
+   <div class="container">
+
+      <div class="row align-items-center">
+
+         <a href="#" class="logo mr-auto"> <i class="fas fa-mug-hot"></i> Chai </a>
+
+         <nav class="nav">
+            <a href="index.html">home</a>
+            <a href="about.html">about</a>
+            <a href="menue.html">menu</a>
+            <a href="other.html">Other Products</a>
+            <a href="contact.html">contact</a>
+         </nav>
+
+      </div>
+
+   </div>
+
+</header>
+<section class="contact" id="contact">
+
+   <h1 class="heading"> contact us  </h1>
+
+   <div class="container">
+
+      <div class="contact-info-container">
+
+         <div class="box">
+            <i class="fas fa-phone"></i>
+            <h3>phone</h3>
+            <p>+91 7021373427</p>
+            <p>+91 8652329306</p>
+         </div>
+   
+         <div class="box">
+            <i class="fas fa-envelope"></i>
+            <h3>email</h3>
+            <p>niru95544@gmail.com</p>
+         </div>
+         <div class="box">
+            <i class="fas fa-map"></i>
+            <h3>address</h3>
+            <p>13/102 galaxy apt. patliputra nagar oshiwara new link road jogeshwari(w) mum-400102</p>
+         </div>
+      </div>
+      <div class="row align-items-center">
+
+         <div class="col-md-6 mb-5 mb-md-0 ">
+            <iframe class="map w-100" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3769.0139337881265!2d72.8349822148797!3d19.150867354591643!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b64784a95a87%3A0xaae02b9996f91aa1!2s13%2C%20Prakash%20Nagar%2C%20Patliputra%2C%20Jogeshwari%20West%2C%20Mumbai%2C%20Maharashtra%20400102!5e0!3m2!1sen!2sin!4v1648089200766!5m2!1sen!2sin" width="150" height="150" style="border:2;" allowfullscreen="" loading="lazy" title="map" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+         </div>
+
+         <form name="f1" method="post" onsubmit="return hello()" class="col-md-6">
+            <h3>get in touch</h3>
+            <input type="text" placeholder="your name" name="name" class="box">
+            <input type="email" placeholder="email"   name="email" class="box">
+            <input type="number" placeholder="phone" name="phone" class="box">
+            <textarea name="" placeholder="message" class="box" id="" cols="30" rows="10"></textarea>
+            <input type="submit" value="send message" class="link-btn">
+  
+            
+         </form>
+      </div>
+   </div>
+</section>        
+<section class="footer container">
+
+   <a href="#" class="logo"> <i class="fas fa-mug-hot"></i> Chai</a>
+
+   <p class="credit"> Made by <span>Niranjan Pabharekar</span>,</p>
+   <div class="share">
+      <a href="https://www.facebook.com/niranjan.pabharekar.9" class="fab fa-facebook-f"></a>
+      <a href="https://www.linkedin.com/feed/" class="fab fa-linkedin"></a>
+      <a href="#" class="fab fa-twitter"></a>
+      
+   </div>
+   
+</section>
+<script >
+   function hello()
+   {
+     var a=document.f1.name.value;
+     
+     var c=document.f1.phone.value;
+     
+     var e=document.f1.email.value;
+   
+     
+
+     if(a=="")
+     {
+         alert("Enter the first name");
+         return false;
+     }
+      if((a.length<3) || (a.length>10))
+     {
+         alert("first name must be in between 3 to 10");
+         return false;
+     }
+       if(!isNan(a))
+     {
+         alert("name must be in charecter not in number");
+         return false;
+     }
+
+     if(b=="")
+     {
+         alert("Enter the lastname name");
+         return false;
+     }
+      if((b.length<3) || (b.length>10))
+     {
+         alert("last name must be in between 3 to 10");
+         return false;
+     }
+       if(!isNan(b))
+     {
+         alert("name must be in charecter not in number");
+         return false;
+     }
+
+     if(c=="")
+     {
+         alert("Enter the phone no");
+         return false;
+     }
+      if( (c.length>10)&&(c.length<10))
+     {
+         alert("Phone no must be 10 digit");
+         return false;
+     }
+       if(isNan(c))
+     {
+         alert("plese enter Phone number in numeric");
+         return false;
+     }
+     if ((c.charAt(0)!=9)&&(c.charAt(0)!=8)&&(c.charAt(0)!=7))
+     {
+      alert("plese enter valid no");
+      return false
+     }
+
+     if(d=="")
+     {
+         alert("Enter the address");
+         return false;
+     }
+       if(isNan(d))
+     {
+         alert("plese enter valid address");
+         return false;
+     }
+      if(e=="")
+     {
+         alert("Enter the email address");
+         return false;
+     }
+     
+</body>
+</html>

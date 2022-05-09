@@ -1,0 +1,140 @@
+<!DOCTYPE html>  
+<html>  
+<head>  
+  <title>validation form</title>
+<link rel="stylesheet" href="validation.css">
+<!---<script type="text/javascript" src="validation.js"></script>--->
+<script >
+   function hello()
+   {
+     var a=document.f1.firstname.value;
+     var b=document.f1.lastname.value;
+     var c=document.f1.phone.value;
+     var d=document.f1.address.value;
+     var e=document.f1.email.value;
+     var f=document.f1.psw.value;
+     var g=document.f1.psw-repeat.value;
+     
+
+     if(a=="")
+     {
+         alert("Enter the first name");
+         return false;
+     }
+      if((a.length<3) || (a.length>10))
+     {
+         alert("first name must be in between 3 to 10");
+         return false;
+     }
+       if(!isNan(a))
+     {
+         alert("name must be in charecter not in number");
+         return false;
+     }
+
+     if(b=="")
+     {
+         alert("Enter the lastname name");
+         return false;
+     }
+      if((b.length<3) || (b.length>10))
+     {
+         alert("last name must be in between 3 to 10");
+         return false;
+     }
+       if(!isNan(b))
+     {
+         alert("name must be in charecter not in number");
+         return false;
+     }
+
+     if(c=="")
+     {
+         alert("Enter the phone no");
+         return false;
+     }
+      if( (c.length>10)&&(c.length<10))
+     {
+         alert("Phone no must be 10 digit");
+         return false;
+     }
+       if(isNan(c))
+     {
+         alert("plese enter Phone number in numeric");
+         return false;
+     }
+     if ((c.charAt(0)!=9)&&(c.charAt(0)!=8)&&(c.charAt(0)!=7))
+     {
+      alert("plese enter valid no");
+      return false
+     }
+
+     if(d=="")
+     {
+         alert("Enter the address");
+         return false;
+     }
+       if(isNan(d))
+     {
+         alert("plese enter valid address");
+         return false;
+     }
+      if(e=="")
+     {
+         alert("Enter the email address");
+         return false;
+     }
+     
+     if(f=="")
+     {
+         alert("Enter the password");
+         return false;
+     }
+     if((f.length<4)&&(f.length>8))
+     {
+         alert(" password must be in 4 to 8 range");
+         return false;
+     }
+
+     if(g=="")
+      {
+         alert("Enter the repassword");
+         return false;
+     }
+     if(g!=f)
+      {
+         alert("plese enter valid password");
+         return false;
+     }
+   }
+
+ </script>
+</head>  
+<body>  
+<form name="f1" method="post"action="index2.html" onsubmit="return hello()">  
+  <div class="container">  
+  <center>  <h1> Student Registeration Form</h1> </center>  
+  <hr>  
+  <label> Firstname </label>   
+<input type="text" name="firstname" placeholder= "Firstname" >     
+<label> Lastname: </label>    
+<input type="text" name="lastname" placeholder="Lastname">     
+<label>   
+Phone :  
+</label>    
+<input type="text" name="phone" placeholder="phone no.">   
+Current Address :  
+<textarea cols="80" rows="5" name="address" placeholder="Current Address" value="address" >  
+</textarea>  
+ <label for="email"><b>Email</b></label>  
+ <input type="text" placeholder="Enter Email" name="email" >  
+  
+    <label for="psw"><b>Password</b></label>  
+    <input type="password" placeholder="Enter Password" name="psw" >  
+  
+    <label for="psw-repeat"><b>Re-type Password</b></label>  
+    <input type="password" placeholder="Retype Password" name="psw-repeat" >  
+    <button type="submit" class="registerbtn">Register</button>    
+</form>  
+</body>  
+</html>  
